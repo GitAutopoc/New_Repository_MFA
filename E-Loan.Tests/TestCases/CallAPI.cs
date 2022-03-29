@@ -10,18 +10,14 @@ namespace E_Loan.Tests.TestCases
 {
     public class CallAPI
     {
-        public static TestResults testResults;
-      
-        public static Dictionary<string, TestCaseResultDto> testCaseResults;
-        public static string customValue;
         public static string UniqueGuid = "18f69543-da90-412c-8a01-4825f31340bb";
 
         
         public static async Task<string> saveTestResult(string testName, string status, string type)
         {
-            testResults = new TestResults();
-            testCaseResults = new Dictionary<string, TestCaseResultDto>();
-            customValue = System.IO.File.ReadAllText("../../../../custom.ih");
+            TestResults testResults = new TestResults();
+            Dictionary<string, TestCaseResultDto>  testCaseResults = new Dictionary<string, TestCaseResultDto>();
+            string customValue = System.IO.File.ReadAllText("../../../../custom.ih");
             testResults.CustomData = customValue;
             int actualScore = 0;
             String testStatus = "Failed";
