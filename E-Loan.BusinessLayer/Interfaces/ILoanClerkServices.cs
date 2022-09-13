@@ -11,5 +11,6 @@ namespace E_Loan.BusinessLayer.Interfaces
         Task<IEnumerable<LoanMaster>> NotReceivedLoanApplication();
         Task<LoanProcesstrans> ProcessLoan(LoanProcesstrans loanProcesstrans);
         Task<LoanMaster> ReceivedLoan(int loanId);
+        Task<loanId>ReceivedLoan(int);
     }
 }
